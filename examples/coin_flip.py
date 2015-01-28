@@ -1,7 +1,7 @@
 from random import randint
 from montecarlo import montecarlo
 
-def flip_coin():
+def flip_coin(g):
     if randint(0, 1) == 0:
         return True
     return False

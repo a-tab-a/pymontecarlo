@@ -14,7 +14,7 @@ class montecarlo:
             print '######################'
             print '## FINAL '
             print '######################'
-        print probability(success, iterations)
+        print montecarlo.probability(success, iterations)
 
     def run(self, iterations=1000000):
         g = {}
@@ -23,9 +23,9 @@ class montecarlo:
 
         success = 0
         for i in range(1, iterations+1):
-            if self.func(g, *args):
+            if self.func(g):
                 success += 1
-            if (given % 10000 == 1):
+            if (i % 10000 == 1):
                 self.print_results(success, i)
         self.print_results(success, iterations)
 
