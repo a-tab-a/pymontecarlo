@@ -1,5 +1,5 @@
-from random import randint
 from montecarlo import montecarlo
+from random import randint
 
 def flip_is_heads(g):
     return randint(0, 1) == 0
