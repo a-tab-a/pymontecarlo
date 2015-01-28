@@ -27,9 +27,9 @@ class montecarlo:
                 success += 1
             if (i % print_every == 1):
                 self.print_results(success, i)
-        self.print_results(success, iterations)
+        self.print_results(success, iterations, final=True)
 
         if self.teardown is not None:
             self.teardown()
 
-        return self.probability(success, iterations, final=True)
+        return self.probability(success, iterations)
