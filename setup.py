@@ -6,7 +6,7 @@ except ImportError:
 setup(
   name = 'montecarlo',
   packages = ['montecarlo'],
-  version = '0.1.4',
+  version = '0.1.5',
   description = 'A small Python library for creating simple Monte Carlo simulations.',
   author = 'Christopher Su',
   author_email = 'chris+gh@christopher.su',

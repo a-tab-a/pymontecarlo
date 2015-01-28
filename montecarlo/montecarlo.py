@@ -18,18 +18,18 @@ class montecarlo:
 
     def run(self, iterations=1000000):
         g = {}
-        if setup is not None:
-            g = setup()
+        if self.setup is not None:
+            g = self.setup()
 
         success = 0
         for i in range(1, iterations+1):
-            if func(g, *args):
+            if self.func(g, *args):
                 success += 1
             if (given % 10000 == 1):
-                print_results(success, i)
-        print_results(success, iterations)
+                self.print_results(success, i)
+        self.print_results(success, iterations)
 
-        if teardown is not None:
-            teardown()
+        if self.teardown is not None:
+            self.teardown()
 
-        return probability(success, iterations)
+        return self.probability(success, iterations)
