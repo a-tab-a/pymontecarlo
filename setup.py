@@ -1,18 +1,12 @@
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
-
-with open('README.md') as file:
-    long_description = file.read()
-
+from distutils.core import setup
 setup(
-    name='montecarlo',
-    version='0.1',
-    description='A small Python module to quickly create simple Monte Carlo simulations.',
-    long_description=long_description,
-    author='Christopher Su',
-    author_email='chris+py@christopher.su',
-    url='https://github.com/csu/pymontecarlo',
-    packages=['montecarlo'],
+  name = 'montecarlo',
+  packages = ['montecarlo'], # this must be the same as the name above
+  version = '0.1',
+  description = 'A small Python library for creating simple Monte Carlo simulations.',
+  author = 'Christopher Su',
+  author_email = 'chris+gh@christopher.su',
+  url = 'https://github.com/csu/pymontecarlo', # use the URL to the github repo
+  download_url = 'https://github.com/csu/pymontecarlo/tarball/0.1', # I'll explain this in a second
+  classifiers = [],
 )
