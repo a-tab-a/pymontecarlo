@@ -9,7 +9,7 @@ with open('README.md') as file:
 setup(
   name = 'montecarlo',
   packages = ['montecarlo'],
-  version = '0.1.2',
+  version = '0.1.3',
   description = 'A small Python library for creating simple Monte Carlo simulations.',
   long_description=long_description,
   author = 'Christopher Su',
