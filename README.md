@@ -7,18 +7,16 @@ pip install montecarlo
 ```
 
 ## Usage
-(Under construction)
+(See examples directory for more examples)
 ```python
+from random import randint
 from montecarlo import montecarlo
 
-def setup():
-    ...
-
-def test():
-    if (...):
+def flip_coin(g):
+    if randint(0, 1) == 0:
         return True
     return False
 
-mc = montecarlo(test, setup=setup)
-mc.run(iterations=100000)
+mc = montecarlo(flip_coin)
+mc.run()
 ```

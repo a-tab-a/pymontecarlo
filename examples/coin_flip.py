@@ -7,4 +7,5 @@ def flip_coin(g):
     return False
 
 mc = montecarlo(flip_coin)
-mc.run()
+result = mc.run()
+print "Result returned: " + str(result)

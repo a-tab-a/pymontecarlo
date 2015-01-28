@@ -16,7 +16,7 @@ class montecarlo:
             print '######################'
         print montecarlo.probability(success, iterations)
 
-    def run(self, iterations=1000000):
+    def run(self, iterations=1000000, print_every=10000):
         g = {}
         if self.setup is not None:
             g = self.setup()
@@ -25,7 +25,7 @@ class montecarlo:
         for i in range(1, iterations+1):
             if self.func(g):
                 success += 1
-            if (i % 10000 == 1):
+            if (i % print_every == 1):
                 self.print_results(success, i)
         self.print_results(success, iterations)
 
