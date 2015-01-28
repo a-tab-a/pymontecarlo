@@ -1,4 +1,5 @@
 from distutils.core import setup
+
 setup(
   name = 'montecarlo',
   packages = ['montecarlo'], # this must be the same as the name above
@@ -8,5 +9,4 @@ setup(
   author_email = 'chris+gh@christopher.su',
   url = 'https://github.com/csu/pymontecarlo', # use the URL to the github repo
   download_url = 'https://github.com/csu/pymontecarlo/tarball/0.1', # I'll explain this in a second
-  classifiers = [],
 )
