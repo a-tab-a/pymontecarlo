@@ -11,10 +11,10 @@ class montecarlo:
     @staticmethod
     def print_results(success, iterations, final=False):
         if final:
-            print '######################'
-            print '## FINAL '
-            print '######################'
-        print montecarlo.probability(success, iterations)
+            print '======================'
+            print '======= FINAL ========'
+            print '======================'
+        print 'Iteration #' + str(iterations) + ': ' + str(montecarlo.probability(success, iterations))
 
     def run(self, iterations=1000000, print_every=10000):
         g = {}
@@ -25,7 +25,7 @@ class montecarlo:
         for i in range(1, iterations+1):
             if self.func(g):
                 success += 1
-            if (i % print_every == 1):
+            if (i % print_every == 0):
                 self.print_results(success, i)
         self.print_results(success, iterations, final=True)
 
