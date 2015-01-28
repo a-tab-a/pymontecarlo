@@ -19,6 +19,6 @@ def test():
         return True
     return False
 
-mc = montecarlo(func, setup=setup)
+mc = montecarlo(test, setup=setup)
 mc.run(iterations=100000)
 ```
