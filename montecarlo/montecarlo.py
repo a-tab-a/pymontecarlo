@@ -32,4 +32,4 @@ class montecarlo:
         if self.teardown is not None:
             self.teardown()
 
-        return self.probability(success, iterations)
+        return self.probability(success, iterations, final=True)
