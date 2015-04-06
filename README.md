@@ -16,7 +16,7 @@ from random import randint
 def flip_is_heads(g):
     return randint(0, 1) == 0
 
-mc = montecarlo(flip_coin)
+mc = montecarlo(flip_is_heads)
 mc.run()
 ```
 
