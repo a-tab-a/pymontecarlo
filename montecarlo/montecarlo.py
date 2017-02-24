@@ -13,12 +13,12 @@ class montecarlo:
         return float(success)/iterations
 
     @staticmethod
-    def print_results(success=success, iteration=iterations, final=False):
+    def print_results(success, iterations, final=False):
         if final:
-            print '======================'
-            print '======= FINAL ========'
-            print '======================'
-        print 'Iteration #' + str(iterations) + ': ' + str(montecarlo.probability(success, iterations))
+            print('======================')
+            print('======= FINAL ========')
+            print('======================')
+        print('Iteration #' + str(iterations) + ': ' + str(montecarlo.probability(success, iterations)))
 
     def run(self, iterations=1000000, output_every=10000):
         g = {}
@@ -30,10 +30,10 @@ class montecarlo:
             if self.func(g):
                 success += 1
             if (i % output_every == 0):
-                self.output(success=success, iteration=i)
-        self.output(success=success, iteration=iterations, final=True)
+                self.output(success, iterations=i)
+        self.output(success, iterations, final=True)
 
         if self.teardown is not None:
             self.teardown()
 
-        return self.output(success=success, iteration=iterations)
+        return self.output(success, iterations)

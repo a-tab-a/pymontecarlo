@@ -6,4 +6,4 @@ def flip_is_heads(g):
 
 mc = montecarlo(flip_is_heads)
 result = mc.run()
-print "Result returned: " + str(result)
+print("Result returned: " + str(result))
